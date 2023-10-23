@@ -32,16 +32,15 @@ Before you begin, make sure you have the following installed:
 
 3. Install dependencies:
 
-   ```bash
-   npm install
+```bash
+npm install
 
 4. Set up environment variables:
 
 Create a .env file in the project root directory with the following variables:
 
-   ```bash
-   DB=your mongodb atlas link
-   SECRET='your-secret'
+DB=your mongodb atlas link
+SECRET=your-secret
 
 5. Start the application:
 
