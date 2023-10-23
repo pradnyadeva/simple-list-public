@@ -6,8 +6,7 @@ This is a simple To-Do list application that includes JWT (JSON Web Token) authe
 
 - Create new to-do lists.
 - User authentication using JWT.
-- Add, update, and delete to-do items.
-- Mark to-do items as completed.
+- Add to-do items.
 - List your to-do items.
 
 ## Getting Started
