@@ -26,42 +26,38 @@ Before you begin, make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/todo-list.git
-Change directory to the project folder:
+   git clone https://github.com/pradnyadeva/simple-list-public.git
 
-bash
-Copy code
-cd todo-list
-Install dependencies:
+2. Change directory to the project folder:
 
-bash
-Copy code
+3. Install dependencies:
+
+```bash
 npm install
-Set up environment variables:
+
+4. Set up environment variables:
 
 Create a .env file in the project root directory with the following variables:
 
-env
-Copy code
-SECRET=your_secret_key
-MONGO_URI=your_mongodb_connection_uri
-Replace your_secret_key with a secure secret key for JWT and your_mongodb_connection_uri with your MongoDB database connection URI.
+```bash
+DB=your mongodb atlas link
+SECRET='your-secret'
 
-Start the application:
+5. Start the application:
 
-bash
-Copy code
-npm start
+```bash
+npm run start
+
+
 The application should now be running on http://localhost:3200.
 
-Usage
+## Usage
 Register a new account.
 Log in using your registered credentials.
-Create, update, and manage your to-do lists.
-API Documentation
-For API documentation and endpoints, refer to the API Documentation.
+Create, and manage your to-do lists.
 
-Built With
+
+## Built With
 Node.js
 Express.js
 MongoDB
@@ -69,12 +65,13 @@ JSON Web Tokens (JWT)
 Contributing
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-Acknowledgments
+
+## Acknowledgments
 jsonwebtoken for JWT support.
 mongoose for MongoDB connection and modeling.
-Authors
-Your Name - Your GitHub Profile
-Feel free to customize this template to provide more specific information about your project. You can also include usage examples, screenshots, and any additional features you'd like to highlight.
+
+
+## Authors
+Pradnyadeva
+
