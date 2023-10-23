@@ -72,6 +72,5 @@ jsonwebtoken for JWT support.
 mongoose for MongoDB connection and modeling.
 
 
-## Authors
-Pradnyadeva
+
 
