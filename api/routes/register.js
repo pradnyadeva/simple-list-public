@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
           return res.json({ message: "User already exists" });
         }
         const user = await User.create({ email, password, username, createdAt });
-        res
+        return res
           .status(201)
           .json({ message: "User signed in successfully", success: true, user });
         next();

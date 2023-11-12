@@ -11,15 +11,19 @@ const verify = (req, res, next) => {
 
         jwt.verify(token, process.env.SECRET, (err, user) => {
             if (err) {
+                console.log(`Unauthorized failed ${authHeader}`);
                 return res
-                            .sendStatus(201)
-                            .json({message: "success"});
+                            .sendStatus(401)
+                            .json({message: "Unauthorized"});
+                
+
+                
             }
             req.user = user;
             next();
         });
     } else {
-        res.sendStatus(401);
+        return res.sendStatus(401);
     }
 }
 

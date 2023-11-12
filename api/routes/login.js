@@ -8,22 +8,22 @@ router.post("/", async (req, res, next) => {
     try {
         const { email, password} = req.body;
         if (!email || !password){
-            res.json({message: "error"})
+            return res.json({message: "error"})
         }
 
         const user = await User.findOne({email});
         if(!user){
-            res.json({message: "Account is not found"});
+            return res.json({message: "Account is not found"});
         }
         
         if(password == user.password){
             let token = jwt.sign(
-                { userId: user._id, email: user.email },
+                { userId: user._id, email: user.email, username: user.username },
                 process.env.SECRET,
                 { expiresIn: "3h" }
               );
-            res.status(201).json({ message: "User logged in successfully", success: true, token: token });
-            next();
+            return res.status(201).json({ message: "User logged in successfully", success: true, token: token });
+            
         }
         
         

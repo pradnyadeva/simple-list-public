@@ -6,7 +6,8 @@ const verify = require("./verify")
 
 router.post("/", verify, async (req, res, next) => {
     try {
-        const {email, todolist, description} = req.body;
+        const email = req.user.email;
+        const {todolist, description} = req.body;
         const user = await UserList.create({ email, todolist, description });
         res
           .status(201)
